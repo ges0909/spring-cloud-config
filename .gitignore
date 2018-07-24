@@ -1,0 +1,11 @@
+**/.gradle
+**/gradle
+**/build
+**/bin
+**/gradlew
+**/gradlew.bat
+**/.classpath
+**/.settings
+**/.project
+
+.vscode/**
