@@ -1,22 +1,7 @@
-buildscript {
-	ext {
-		springBootVersion = '2.0.3.RELEASE'
-	}
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
-}
-
 plugins {
-    id "io.spring.dependency-management" version "1.0.6.RELEASE"
+  id "io.spring.dependency-management" version "1.0.6.RELEASE"
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
@@ -24,23 +9,10 @@ bootJar {
 	baseName = 'spring-cloud-config-service'
 	version = '0.0.1-SNAPSHOT'
 }
-sourceCompatibility = 1.9
-targetCompatibility = 1.9
-
-repositories {
-	mavenCentral()
-    maven {
-        url 'https://repo.spring.io/libs-milestone'
-    }
-    maven {
-        url 'https://repo.spring.io/libs-snapshot'
-    }
-}
 
 dependencies {
 	compile('org.springframework.cloud:spring-cloud-config-server')
-	compile('org.springframework.boot:spring-boot-starter-security')
-	compile('org.springframework.boot:spring-boot-starter-web')
+	// compile('org.springframework.boot:spring-boot-starter-security')
 }
 
 dependencyManagement {
@@ -51,7 +23,7 @@ dependencyManagement {
 
 eclipse {
 	classpath {
-		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+		containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+		containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
 	}
 }

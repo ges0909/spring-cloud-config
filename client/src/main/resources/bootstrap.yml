@@ -1,0 +1,11 @@
+# The properties to configure the Config Client must be read in before the rest
+# of the application’s configuration is read from the Config Server, during the
+# bootstrap phase. Therfore 'boostrap.yml' has to be used.
+spring:
+  application:
+    name: my-config-client
+  profiles:
+    active: DEV
+  cloud:
+    config:
+      uri: http://localhost:8888

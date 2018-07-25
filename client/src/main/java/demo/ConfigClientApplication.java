@@ -14,10 +14,14 @@ public class ConfigClientApplication {
   }
 }
 
+// The default configuration only allows the values to be read on the client’s
+// startup and not again. So, using @RefreshScope we force the bean to refresh
+// its configuration, which means it will pull updated values from the Config
+// Server, and then trigger a refresh event.
 @RefreshScope
 @RestController
 class MessageRestController {
-  @Value("${message:Hello default}")
+  @Value("${message:This is the non-configured default value!}")
   private String message;
 
   @RequestMapping("/message")
