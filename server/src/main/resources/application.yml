@@ -9,5 +9,4 @@ spring:
         git:
           # on Windows an extra "/" in the file URL is needed
           # if it is an absolute path with a drive prefix
-          # uri: file:///${user.home}/Desktop/config-repo
-          uri: file:///Users/schrager.INFINIT/Desktop/config-repo
+          uri: file:///${user.home}/Projekte/spring-cloud-config/config-repo

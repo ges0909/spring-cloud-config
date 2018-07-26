@@ -15,3 +15,12 @@ git add my-config-client-development.yml
 git add my-config-client-production.yml
 git commit -m "initial config"
 ```
+
+Test the client.
+
+* `curl http://localhost:8080/message`
+
+Test the server.
+
+* `curl http://localhost:8888/my-config-client/default`
+* `curl http://localhost:8888/my-config-client/DEV`

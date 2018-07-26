@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Debug Client",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopOnEntry": false,
+      "mainClass": "demo.ConfigClientApplication",
+      "projectName": "client",
+      "args": ""
+    },
+    {
+      "type": "java",
+      "name": "Debug Server",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopOnEntry": false,
+      "mainClass": "demo.ConfigServerApplication",
+      "projectName": "server",
+      "args": "-Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Attach)",
+      "request": "attach",
+      "hostName": "localhost",
+      "port": 0
+    }
+  ]
+}

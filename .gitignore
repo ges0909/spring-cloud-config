@@ -7,5 +7,4 @@
 **/.classpath
 **/.settings
 **/.project
-
-.vscode/**
+.vscode/settings.json
